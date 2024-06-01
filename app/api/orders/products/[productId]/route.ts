@@ -25,7 +25,6 @@ export const GET = async (req: NextRequest, { params }: { params: { productId: s
             return NextResponse.json(bookings, { status: 200 })
         } else {
             console.log("No bookings found");
-            return [];
         }
 
     } catch (err) {
