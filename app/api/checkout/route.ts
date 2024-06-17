@@ -1,4 +1,4 @@
-/*import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 
 const corsHeaders = {
@@ -12,7 +12,7 @@ export async function OPTIONS() {
 }
 
 export async function POST(req: NextRequest) {
-    try {
+    /*try {
         const { cartItems, customer } = await req.json();
 
         if (!cartItems || !customer) {
@@ -57,9 +57,10 @@ export async function POST(req: NextRequest) {
     } catch (err) {
         console.log("[checkout_POST]", err)
         return new NextResponse("Internal Server Error", { status: 500 })
-    }
+    }*/
+
+    return null;
 }
 
 export const dynamic = "force-dynamic";
 
-*/
