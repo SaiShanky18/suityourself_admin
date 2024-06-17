@@ -12,7 +12,7 @@ export async function OPTIONS() {
 }
 
 export async function POST(req: NextRequest) {
-    /*try {
+    try {
         const { cartItems, customer } = await req.json();
 
         if (!cartItems || !customer) {
@@ -26,8 +26,8 @@ export async function POST(req: NextRequest) {
                 allowed_countries: ["TT"],
             },
             shipping_options: [
-                { shipping_rate: "" dont think I can get this },
-                { shipping_rate: "" dont think I can get this },
+                { shipping_rate: ""},
+                { shipping_rate: ""},
             ],
             line_items: cartItems.map((cartItem: any) => ({
                 price_data: {
@@ -57,9 +57,7 @@ export async function POST(req: NextRequest) {
     } catch (err) {
         console.log("[checkout_POST]", err)
         return new NextResponse("Internal Server Error", { status: 500 })
-    }*/
-
-    return null;
+    }
 }
 
 export const dynamic = "force-dynamic";
