@@ -28,7 +28,8 @@ type ProductType = {
 type OrderColumnType = {
     _id: string;
     customer: string;
-    products: number;
+    bookingFrom: Date;
+    bookingTo: Date;
     totalAmount: number;
     createdAt: string;
 }

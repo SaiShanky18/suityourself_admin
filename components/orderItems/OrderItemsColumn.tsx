@@ -19,6 +19,20 @@ export const columns: ColumnDef<OrderItemType>[] = [
     },
   },
   {
+    accessorKey: "productId",
+    header: "ProductID",
+    cell: ({ row }) => {
+      return (
+        <Link
+          href={`/products/${row.original.product._id}`}
+          className="hover:text-red-1"
+        >
+          {row.original.product._id}
+        </Link>
+      );
+    },
+  },
+  {
     accessorKey: "colour",
     header: "Colour",
   },

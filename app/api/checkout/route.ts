@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+/*import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 
 const corsHeaders = {
@@ -25,10 +25,10 @@ export async function POST(req: NextRequest) {
             shipping_address_collection: {
                 allowed_countries: ["TT"],
             },
-            /*shipping_options: [
+            shipping_options: [
                 { shipping_rate: "" dont think I can get this },
                 { shipping_rate: "" dont think I can get this },
-            ],*/
+            ],
             line_items: cartItems.map((cartItem: any) => ({
                 price_data: {
                     currency: "ttd",
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
                 quantity: cartItem.quantity,
             })),
             client_reference_id: customer.clerkId,
-            success_url: `${process.env.ECOMMERCE_STORE_URL}/payment_success`,
+            success_url: `${process.env.ECOMMERCE_STORE_URL}/payment_result`,
             cancel_url: `${process.env.ECOMMERCE_STORE_URL}/cart`,
         })
 
@@ -61,3 +61,5 @@ export async function POST(req: NextRequest) {
 }
 
 export const dynamic = "force-dynamic";
+
+*/

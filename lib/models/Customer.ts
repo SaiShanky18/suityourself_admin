@@ -4,6 +4,7 @@ const customerSchema = new mongoose.Schema({
     clerkId: String,
     name: String,
     email: String,
+    phone: Number,
     orders: {
         type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }]
     },

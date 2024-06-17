@@ -12,10 +12,12 @@ export const GET = async (req: NextRequest) => {
 
         const orderDetails = await Promise.all(orders.map(async (order) => {
             const customer = await Customer.findOne({ clerkId: order.customerClerkId })
+        
             return {
                 _id: order._id,
                 customer: customer.name,
-                products: order.products.length,
+                bookingFrom: format(order.products[0].startDate, "dd/MM/yyyy"),
+                bookingTo: format(order.products[0].endDate, "dd/MM/yyyy"),
                 totalAmount: order.totalAmount,
                 createdAt: format(order.createdAt, "dd/MM/yyyy")
             }

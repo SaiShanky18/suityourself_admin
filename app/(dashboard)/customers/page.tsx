@@ -14,7 +14,7 @@ const Customers = async () => {
     <div className='px-10 py-5'>
       <p className='text-heading2-bold'>Customers</p>
       <Separator className='my-5 bg-grey-1' />
-      <DataTable columns={columns} data={customers} searchKey='name' />
+      <DataTable columns={columns} data={customers} searchKey='email' />
     </div>
   )
 }

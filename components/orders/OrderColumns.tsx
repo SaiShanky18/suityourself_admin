@@ -23,15 +23,19 @@ export const columns: ColumnDef<OrderColumnType>[] = [
     header: "Customer",
   },
   {
-    accessorKey: "Booking",
-    header: "Dates Reserved",
+    accessorKey: "bookingFrom",
+    header: "Date From",
+  },
+  {
+    accessorKey: "bookingTo",
+    header: "Date To",
   },
   {
     accessorKey: "totalAmount",
-    header: "Total (TT$)",
+    header: "Total (US$)",
   },
   {
     accessorKey: "createdAt",
-    header: "Created At (dd/mm/yyyy)",
+    header: "Created At",
   },
 ];
